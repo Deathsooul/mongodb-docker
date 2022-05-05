@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  mongodb:
+    image: mongo:3.6.8
+    container_name: mongo3.6.8
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /home/wallace/mongodb/mongo3.6.8/database:/data/db
+    ports:
+      - 27017:27017
+    restart: unless-stopped
